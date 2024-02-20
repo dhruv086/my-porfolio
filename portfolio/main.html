@@ -1,4 +1,4 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="main.css">
@@ -103,14 +103,14 @@
   <div class="left-section">
   
   <div class="contact-me-headline">Question,Thoughts,Or Just <br>Want To Say Hello?</div>
-  <form method="post" autocomplete="off">
+  <form id="contactForm" autocomplete="off">
    <input id="fname" value="" style="display: inline-block;" type="text" placeholder="Enter your first name">
    <input id="lname" style="display: inline-block;" type="text" placeholder="Enter your last name"><br>
    <input id="mail" style="display: inline-block;" type="text" placeholder="Enter your mail">
    <input id="phonenumber" style="display: inline-block;" type="text" placeholder="Enter your phone number"><br>
    <input id="typmessage" style="display: inline-block;" type="text" placeholder="Enter your message">
    <p id="output"></p>
-   <input  onclick="clearText()" style="display: block;" class="submit-btn" type="button" value="submit">
+   <input style="display: block;" class="submit-btn" type="submit" >
   </form>
   
 </div>
@@ -151,23 +151,7 @@
     backDelay: 100,
   })
 </script>
-<script>
-  let output = document.getElementById('output')
-  
-  function clearText(event){
-    var userName = document.getElementById('fname').value;
-    let fname = document.getElementById('fname');
-    let lname = document.getElementById('lname');
-    let mail = document.getElementById('mail');
-    let phonenumber = document.getElementById('phonenumber');
-    let typmessage = document.getElementById('typmessage');
-    fname.value = ""; 
-    lname.value ="";
-    mail.value = "";
-    phonenumber.value = "";
-    typmessage.value = "";
-    output.innerHTML = "<p>" + userName +  "	&apos;s your detail are submitted" +"</p>";
-  }
-</script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="form.js"></script> 
+</body>
 </html>
